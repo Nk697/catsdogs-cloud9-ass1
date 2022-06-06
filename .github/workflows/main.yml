@@ -28,7 +28,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: npks
-        IMAGE_TAG: v1
+        IMAGE_TAG: meow
       run: |
         cd cats
         # Build a docker container and push it to ECR 
@@ -41,8 +41,8 @@ jobs:
       id: build-image-dogs
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
-        IMAGE_TAG: dogs-v${{ steps.version.outputs.VERSION }}
+        ECR_REPOSITORY: npks
+        IMAGE_TAG: tuffy
       run: |
         cd dogs
         # Build a docker container and push it to ECR repo
