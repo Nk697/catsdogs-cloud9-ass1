@@ -29,7 +29,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: meow
-        IMAGE_TAG: meow0
+        IMAGE_TAG: meow010
       run: |
         cd cats
         # Build a docker container and push it to ECR 
@@ -42,7 +42,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: tuffy
-        IMAGE_TAG: tuffy00
+        IMAGE_TAG: tuffy001
       run: |
         cd dogs
         # Build a docker container and push it to ECR repo
